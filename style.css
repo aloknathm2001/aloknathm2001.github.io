@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   background-color: #0a0a0a;
   color: #e5e5e5;
@@ -7,6 +8,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Header */
 header {
   text-align: center;
   padding: 80px 20px;
@@ -15,6 +17,50 @@ header {
   box-shadow: 0 0 40px rgba(150, 100, 255, 0.1);
 }
 
+/* Layout for image + text side by side */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-layout {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid rgba(200, 160, 255, 0.4);
+  box-shadow: 0 0 25px rgba(180, 100, 255, 0.3);
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(200, 160, 255, 0.6);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Header Text */
+.header-text {
+  text-align: left;
+  max-width: 600px;
+}
+
+/* Title Glow */
 h1 {
   font-size: 3em;
   color: #b19cd9;
@@ -27,6 +73,7 @@ h1 {
   to { text-shadow: 0 0 25px #c9a4ff; }
 }
 
+/* Subtitle */
 .subtitle {
   color: #aaa;
   margin-top: 10px;
@@ -34,6 +81,7 @@ h1 {
   letter-spacing: 1px;
 }
 
+/* Section Styling */
 section {
   max-width: 950px;
   margin: 60px auto;
@@ -48,12 +96,14 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Lists */
 ul {
   list-style-type: square;
   margin-left: 20px;
   color: #ccc;
 }
 
+/* Links */
 a {
   color: #b19cd9;
   text-decoration: none;
@@ -64,12 +114,14 @@ a:hover {
   text-shadow: 0 0 8px #b794f4;
 }
 
+/* Projects Grid */
 .projects-grid {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* Project Cards */
 .card {
   background: linear-gradient(145deg, #141414, #0e0e0e);
   border-radius: 15px;
@@ -82,6 +134,7 @@ a:hover {
   box-shadow: 0 0 20px rgba(180, 100, 255, 0.3);
 }
 
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.9em;
@@ -91,16 +144,18 @@ footer {
   background-color: #0c0c0c;
 }
 
+/* Sparkle effect */
 footer .sparkle {
   color: #c0aee8;
   animation: sparkle 1.5s infinite alternate;
 }
+
 @keyframes sparkle {
   from { opacity: 0.5; }
   to { opacity: 1; text-shadow: 0 0 10px #b794f4; }
 }
 
-/* Scroll animations */
+/* Scroll Animation */
 .slide-up {
   opacity: 0;
   transform: translateY(30px);
@@ -111,7 +166,7 @@ footer .sparkle {
   transform: translateY(0);
 }
 
-/* Custom glowing cursor */
+/* Glowing Cursor */
 .cursor {
   position: fixed;
   top: 0;
@@ -123,4 +178,26 @@ footer .sparkle {
   pointer-events: none;
   mix-blend-mode: screen;
   transform: translate(-50%, -50%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 700px) {
+  .side-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 2.3em;
+  }
 }

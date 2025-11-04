@@ -11,8 +11,13 @@
   <div class="cursor"></div>
 
   <header class="fade-in">
-    <h1 class="glow">Alok Nath M</h1>
-    <p class="subtitle">Software Engineer · Qt / C++ Developer · Real-Time Systems & Geospatial Applications</p>
+    <div class="profile-container side-layout">
+      <img src="images/profile.jpeg" alt="Alok Nath" class="profile-pic">
+      <div class="header-text">
+        <h1 class="glow">Alok Nath M</h1>
+        <p class="subtitle">Software Engineer · Qt / C++ Developer · Real-Time Systems & Geospatial Applications</p>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -20,7 +25,7 @@
       <h2>About</h2>
       <p>
         I’m a software engineer experienced in designing and developing real-time, high-performance systems 
-        using <strong>Qt (QML/C++)</strong>, <strong>Python</strong>, and distributed communication frameworks. 
+        using <strong>Qt /QML, C++</strong>, <strong>Python</strong>, and distributed communication frameworks. 
         My work spans across geospatial visualization, sensor interfacing, tactical UI systems, and 
         high-availability architectures. I enjoy crafting efficient solutions that merge technical precision 
         with elegant design.
@@ -89,7 +94,7 @@
   </footer>
 
   <script>
-    // Smooth cursor glow
+    // Smooth glowing cursor
     const cursor = document.querySelector('.cursor');
     document.addEventListener('mousemove', e => {
       cursor.style.left = e.clientX + 'px';
