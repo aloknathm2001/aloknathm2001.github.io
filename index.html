@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alok Nath | Software Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cursor"></div>
+
+  <header class="fade-in">
+    <h1 class="glow">Alok Nath M</h1>
+    <p class="subtitle">Software Engineer · Qt / C++ Developer · Real-Time Systems & Geospatial Applications</p>
+  </header>
+
+  <main>
+    <section id="about" class="slide-up">
+      <h2>About</h2>
+      <p>
+        I’m a software engineer experienced in designing and developing real-time, high-performance systems 
+        using <strong>Qt (QML/C++)</strong>, <strong>Python</strong>, and distributed communication frameworks. 
+        My work spans across geospatial visualization, sensor interfacing, tactical UI systems, and 
+        high-availability architectures. I enjoy crafting efficient solutions that merge technical precision 
+        with elegant design.
+      </p>
+    </section>
+
+    <section id="skills" class="slide-up">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> C++, Python, SQL, JavaScript, Shell</li>
+        <li><strong>Frameworks:</strong> Qt/QML, Django, Flask, ROS</li>
+        <li><strong>Networking:</strong> UDP, TCP, DDS, Multithreading, Sockets</li>
+        <li><strong>Tools:</strong> Git, Docker, FFMPEG, GStreamer, Xilinx SOM</li>
+        <li><strong>Concepts:</strong> OOP, Data Structures, UML, Fault Tolerance, SLAM</li>
+        <li><strong>AI/ML:</strong> TensorFlow, Keras, YOLOv5, NLTK, Logistic Regression</li>
+        <li><strong>Databases:</strong> MongoDB, Redis, PostgreSQL</li>
+        <li><strong>OS:</strong> Linux (RHEL / Ubuntu), Windows</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="slide-up">
+      <h2>Highlighted Projects</h2>
+      <div class="projects-grid">
+        <div class="project card">
+          <h3>Real-Time Geospatial Visualization System</h3>
+          <p>Qt/QML-based mapping interface with multi-layer overlays, live DDS data streams, and sensor feeds.</p>
+        </div>
+
+        <div class="project card">
+          <h3>Distributed Communication Middleware</h3>
+          <p>Low-latency UDP/DDS communication with redundancy and fault tolerance across computing nodes.</p>
+        </div>
+
+        <div class="project card">
+          <h3>Audio Codec & Screen Capture Utility</h3>
+          <p>Multimedia suite using Qt + FFMPEG for synchronized audio-video capture with low CPU footprint.</p>
+        </div>
+
+        <div class="project card">
+          <h3>Touch-Interface Control Console</h3>
+          <p>Responsive multi-function touch UI built with QtQuick and real-time feedback widgets.</p>
+        </div>
+
+        <div class="project card">
+          <h3>Intelligent Inventory Management System</h3>
+          <p>Predictive system with Django & ML models to forecast inventory usage and automate alerts.</p>
+        </div>
+
+        <div class="project card">
+          <h3>Visual SLAM & Object Detection</h3>
+          <p>SLAM + YOLO pipeline implemented on embedded hardware using Xilinx SOM for object tracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="slide-up">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:aloknathm24@gmail.com">aloknathm24@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/aloknathm2001" target="_blank">github.com/aloknathm2001</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/alok-nath-m-350496213" target="_blank">linkedin.com/in/alok-nath-m-350496213</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alok Nath M</p>
+  </footer>
+
+  <script>
+    // Smooth cursor glow
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // Scroll fade-in animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

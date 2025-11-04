@@ -1,0 +1,126 @@
+body {
+  background-color: #0a0a0a;
+  color: #e5e5e5;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #1b1b1b, #0a0a0a);
+  border-bottom: 1px solid #222;
+  box-shadow: 0 0 40px rgba(150, 100, 255, 0.1);
+}
+
+h1 {
+  font-size: 3em;
+  color: #b19cd9;
+  letter-spacing: 2px;
+  animation: glowText 2.5s infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #805ad5; }
+  to { text-shadow: 0 0 25px #c9a4ff; }
+}
+
+.subtitle {
+  color: #aaa;
+  margin-top: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+section {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #c0aee8;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+  color: #ccc;
+}
+
+a {
+  color: #b19cd9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #d8b4fe;
+  text-shadow: 0 0 8px #b794f4;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: linear-gradient(145deg, #141414, #0e0e0e);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(50, 50, 50, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(180, 100, 255, 0.3);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 30px 0;
+  color: #888;
+  border-top: 1px solid #222;
+  background-color: #0c0c0c;
+}
+
+footer .sparkle {
+  color: #c0aee8;
+  animation: sparkle 1.5s infinite alternate;
+}
+@keyframes sparkle {
+  from { opacity: 0.5; }
+  to { opacity: 1; text-shadow: 0 0 10px #b794f4; }
+}
+
+/* Scroll animations */
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom glowing cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(190,150,255,0.6), rgba(150,100,255,0));
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+}
